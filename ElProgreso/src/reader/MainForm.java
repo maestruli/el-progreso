@@ -30,7 +30,7 @@ public class MainForm extends JFrame {
 	private JLabel label = new JLabel("Pase el recibo por el Scanner: ");
 	private JScrollPane scroller;
 	private int counter = 0;
-	static double percentageCom = 0.118;
+	static double percentageCom = 0.128;
 
 	public MainForm() throws HeadlessException {
 		initComponents();
