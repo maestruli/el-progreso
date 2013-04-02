@@ -58,7 +58,7 @@
 						<manifest>
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>lib/</classpathPrefix>
-							<mainClass>reader.MainForm</mainClass>
+							<mainClass>reader.gui.MainForm</mainClass>
 						</manifest>
 						<manifestEntries>
 							<appVersion>${project.version}</appVersion>
@@ -69,6 +69,11 @@
 		</plugins>
 	</build>
 	<dependencies>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.3</version>
+		</dependency>
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
