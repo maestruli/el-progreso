@@ -38,7 +38,7 @@ public class BarCodeUtils {
 			return sdf.format(cal.getTime());
 		} catch (ParseException e) {
 			System.out
-					.println("Error obteniendo fecha de vencimiento de la póliza");
+					.println("Error obteniendo fecha de vencimiento de la poliza");
 		}
 		return "";
 	}
