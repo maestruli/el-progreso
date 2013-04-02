@@ -72,6 +72,7 @@ public class MainForm extends JFrame {
 		getContentPane().add(recibo);
 		getContentPane().add(scroller);
 		getContentPane().add(terminar);
+		setTitle("El Progreso: v." + ManifestUtil.getAppVersion());
 		setLocationRelativeTo(null);
 		setVisible(true);
 	}
