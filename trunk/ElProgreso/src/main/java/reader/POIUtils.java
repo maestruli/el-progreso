@@ -2,9 +2,9 @@ package reader;
 
 import java.awt.Desktop;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -20,8 +20,7 @@ public class POIUtils {
 	static HSSFSheet sheet;
 	static {
 		try {
-			FileInputStream file = new FileInputStream(new File(
-					"Template2003.xls"));
+			InputStream file = ClassLoader.getSystemResourceAsStream("Template2003.xls");
 			wb = new HSSFWorkbook(file);
 			file.close();
 			sheet = wb.getSheetAt(0);
