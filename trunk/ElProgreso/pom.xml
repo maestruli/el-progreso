@@ -1,15 +1,16 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.orgaviot</groupId>
 	<artifactId>el-progreso</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>El Progreso Seguros</name>
 	<packaging>jar</packaging>
 
 	<scm>
-		<connection>scm:svn:https://el-progreso.googlecode.com/svn/tags/Release/el-progreso-0.0.1</connection>
-		<developerConnection>scm:svn:https://el-progreso.googlecode.com/svn/tags/Release/el-progreso-0.0.1</developerConnection>
-		<url>scm:svn:https://el-progreso.googlecode.com/svn/tags/Release/el-progreso-0.0.1</url>
+		<connection>scm:svn:https://el-progreso.googlecode.com/svn/trunk/ElProgreso</connection>
+		<developerConnection>scm:svn:https://el-progreso.googlecode.com/svn/trunk/ElProgreso</developerConnection>
+		<url>scm:svn:https://el-progreso.googlecode.com/svn/trunk/ElProgreso/</url>
 	</scm>
 
 	<properties>
