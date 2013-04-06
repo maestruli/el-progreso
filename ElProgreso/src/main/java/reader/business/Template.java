@@ -2,6 +2,7 @@ package reader.business;
 
 import java.awt.Desktop;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -18,7 +19,7 @@ import org.slf4j.LoggerFactory;
 
 public class Template {
 
-	static String TEMPLATE_FILE_NAME = "Template2003.xls";
+	static String TEMPLATE_FILE_NAME = "./Template2003.xls";
 	static String EXCEL_EXT = ".xls";
 	static HSSFWorkbook wb;
 	static HSSFSheet sheet;
@@ -26,10 +27,10 @@ public class Template {
 
 	static {
 		try {
-			InputStream file = ClassLoader
-					.getSystemResourceAsStream(TEMPLATE_FILE_NAME);
-			wb = new HSSFWorkbook(file);
-			file.close();
+			File file = new File(TEMPLATE_FILE_NAME);
+			InputStream is = new FileInputStream(file);
+			wb = new HSSFWorkbook(is);
+			is.close();
 			sheet = wb.getSheetAt(0);
 		} catch (Exception e) {
 			LOGGER.error("Could not open file: " + TEMPLATE_FILE_NAME);
