@@ -2,14 +2,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.orgaviot</groupId>
 	<artifactId>el-progreso</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<name>El Progreso Seguros</name>
 	<packaging>jar</packaging>
 
 	<scm>
-		<connection>scm:svn:https://el-progreso.googlecode.com/svn/tags/Release/el-progreso-0.0.2</connection>
-		<developerConnection>scm:svn:https://el-progreso.googlecode.com/svn/tags/Release/el-progreso-0.0.2</developerConnection>
-		<url>scm:svn:https://el-progreso.googlecode.com/svn/tags/Release/el-progreso-0.0.2</url>
+		<connection>scm:svn:https://el-progreso.googlecode.com/svn/trunk/ElProgreso</connection>
+		<developerConnection>scm:svn:https://el-progreso.googlecode.com/svn/trunk/ElProgreso</developerConnection>
+		<url>scm:svn:https://el-progreso.googlecode.com/svn/trunk/ElProgreso/</url>
 	</scm>
 
 	<properties>
