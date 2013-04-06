@@ -7,6 +7,12 @@
 	<name>El Progreso Seguros</name>
 	<packaging>jar</packaging>
 
+	<scm>
+		<connection>scm:svn:https://el-progreso.googlecode.com/svn/branches/RELEASE</connection>
+		<developerConnection>scm:svn:https://el-progreso.googlecode.com/svn/branches/RELEASE</developerConnection>
+		<url>scm:svn:https://el-progreso.googlecode.com/svn/branches/RELEASE</url>
+	</scm>
+	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.6</maven.compiler.source>
