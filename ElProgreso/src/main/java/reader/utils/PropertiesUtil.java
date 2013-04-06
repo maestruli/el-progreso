@@ -3,10 +3,13 @@ package reader.utils;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.security.CodeSource;
 import java.util.Properties;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import reader.business.Template;
 
 public class PropertiesUtil {
 
@@ -16,7 +19,13 @@ public class PropertiesUtil {
 
 	static {
 		try {
-			File file = new File(CONFIG_FILE_NAME);
+			CodeSource codeSource = PropertiesUtil.class.getProtectionDomain()
+					.getCodeSource();
+			File jarFile = new File(codeSource.getLocation().toURI().getPath());
+			String currentPath = jarFile.getParentFile().getPath();
+			LOGGER.info("Current Path: " + currentPath);
+			File file = new File(currentPath + File.separator
+					+ CONFIG_FILE_NAME);
 			InputStream is = new FileInputStream(file);
 			props.load(is);
 			is.close();
