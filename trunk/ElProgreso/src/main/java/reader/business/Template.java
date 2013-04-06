@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.security.CodeSource;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -27,7 +28,13 @@ public class Template {
 
 	static {
 		try {
-			File file = new File(TEMPLATE_FILE_NAME);
+			CodeSource codeSource = Template.class.getProtectionDomain()
+					.getCodeSource();
+			File jarFile = new File(codeSource.getLocation().toURI().getPath());
+			String currentPath = jarFile.getParentFile().getPath();
+			LOGGER.info("Current Path: " + currentPath);
+			File file = new File(currentPath + File.separator
+					+ TEMPLATE_FILE_NAME);
 			InputStream is = new FileInputStream(file);
 			wb = new HSSFWorkbook(is);
 			is.close();
