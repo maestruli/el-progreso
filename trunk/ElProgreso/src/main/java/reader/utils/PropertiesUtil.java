@@ -1,6 +1,7 @@
 package reader.utils;
 
-import java.io.IOException;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Properties;
 
@@ -8,18 +9,18 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class PropertiesUtil {
-	
-	static String CONFIG_FILE_NAME = "config.properties";
+
+	static String CONFIG_FILE_NAME = "./config.properties";
 	static Properties props = new Properties();
 	static Logger LOGGER = LoggerFactory.getLogger(PropertiesUtil.class);
 
 	static {
-		InputStream file = ClassLoader
-				.getSystemResourceAsStream(CONFIG_FILE_NAME);
 		try {
-			props.load(file);
-			file.close();
-		} catch (IOException e) {
+			File file = new File(CONFIG_FILE_NAME);
+			InputStream is = new FileInputStream(file);
+			props.load(is);
+			is.close();
+		} catch (Exception e) {
 			LOGGER.error("Could not open file: " + CONFIG_FILE_NAME);
 		}
 	}

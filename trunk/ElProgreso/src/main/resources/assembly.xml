@@ -8,16 +8,39 @@
 		<format>zip</format>
 	</formats>
 	<fileSets>
+		<!-- Dependencies -->
 		<fileSet>
 			<directory>${project.build.directory}/lib</directory>
 			<outputDirectory>lib</outputDirectory>
 		</fileSet>
-		<fileSet>
-			<directory>${project.build.directory}</directory>
-			<outputDirectory>/</outputDirectory>
-			<includes>
-				<include>el-progreso-${project.version}.jar</include>
-			</includes>
-		</fileSet>
+		<!-- <fileSet> -->
+		<!-- <directory>${project.build.directory}</directory> -->
+		<!-- <outputDirectory>/</outputDirectory> -->
+		<!-- <includes> -->
+		<!-- <include>el-progreso-${project.version}.jar</include> -->
+		<!-- </includes> -->
+		<!-- </fileSet> -->
 	</fileSets>
+	<files>
+		<!-- Log4j configuration -->
+		<file>
+			<source>src/main/resources/log4j.properties</source>
+			<outputDirectory>/</outputDirectory>
+		</file>
+		<!-- App configuration -->
+		<file>
+			<source>src/main/resources/config.properties</source>
+			<outputDirectory>/</outputDirectory>
+		</file>
+		<!-- Excel Template -->
+		<file>
+			<source>src/main/resources/Template2003.xls</source>
+			<outputDirectory>/</outputDirectory>
+		</file>
+		<!-- App -->
+		<file>
+			<source>${project.build.directory}/el-progreso-${project.version}.jar</source>
+			<outputDirectory>/</outputDirectory>
+		</file>
+	</files>
 </assembly>
