@@ -19,6 +19,19 @@
 		<maven.compiler.target>1.6</maven.compiler.target>
 	</properties>
 
+	<distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>libs-release</name>
+			<url>http://localhost:8081/artifactory/libs-release</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>libs-snapshot</name>
+			<url>http://localhost:8081/artifactory/libs-snapshot</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 	<build>
 		<resources>
 			<resource>
