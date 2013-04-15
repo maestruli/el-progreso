@@ -6,6 +6,8 @@ import java.awt.HeadlessException;
 import java.awt.KeyboardFocusManager;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.AdjustmentEvent;
+import java.awt.event.AdjustmentListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.Collections;
@@ -16,6 +18,7 @@ import java.util.Map;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
@@ -98,6 +101,11 @@ public class MainForm extends JFrame {
 		});
 		scroller = new JScrollPane(table);
 		scroller.setPreferredSize(new Dimension(880, 400));
+		scroller.getVerticalScrollBar().addAdjustmentListener(new AdjustmentListener() {  
+	        public void adjustmentValueChanged(AdjustmentEvent e) {  
+	            e.getAdjustable().setValue(e.getAdjustable().getMaximum());  
+	        }
+	    });
 		getContentPane().add(lblScanner);
 		getContentPane().add(readBill);
 		getContentPane().add(scroller);
@@ -124,7 +132,7 @@ public class MainForm extends JFrame {
 		LOGGER.info(READ_CODE + barCode);
 		return READ_CODE + barCode;
 	}
-
+	
 	private void save(Map<Integer, Bill> bills, String folder) {
 		Iterator it = bills.entrySet().iterator();
 		while (it.hasNext()) {
