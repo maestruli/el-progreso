@@ -1,0 +1,1 @@
+Aplicación que permite mediante la interacción de un scanner de código de barras, la lectura de los recibos de pago y permite generar un informe con el total que se le debe rendir a la compañía aseguradora y el total de ganancia por comisión.
